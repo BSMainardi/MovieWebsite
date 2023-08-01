@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style-type: none;
+}
+
+.container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.wrapper {
+    max-width: 1240px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+.movie {
+    margin-top: 32px;
+}
+
+.movieBox {
+    margin-top: 16px;
+}
+
+.movieCard {
+    border: 1px solid;
+}
+
+.movieDes {
+    padding: 8px;
+}
+
+.movieSum {
+    margin-top: 8px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    --swiper-navigation-color: #fff;
+    opacity: 0.8;
+}
