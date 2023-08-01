@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .h1 {
+      color: cadetblue;
+    }
+    .Hiperlink{
+      color:blue;
+      text-decoration: underline;
+    }
+    .AdvicetosignIntext{
+
+    }
+    .TextBoxDescription{
+
+    }
+    .body{
+      text-align: center;
+    }
+  </style>
+  
+  <script>
+    function LogInFuntion(){
+      var UserName = (document.getElementById("UserName").value);
+      var Password = (document.getElementById("Password").value);
+        if (UserName==UserName1){ 
+          if(Password==Password1){ 
+            window.location.href="https://htmlpreview.github.io/?https://github.com/BSMainardi/MovieWebsite/blob/main/index.html";
+          }
+          else{
+            document.write("Password doesn't match")
+          }
+        }
+        else{
+          document.write("Please verify user name");
+        }
+    }
+
+  </script>
+
+</head>
+
+  <body class="body">
+    <form>
+      <h1 class="h1">LOGIN </style></h1><br>
+      </div>
+
+      <div class="TextBoxDescription"><label id="UserName" >User Name or email: </label></div>
+      <input type="text" id="UserName" name="UserName"><br><br>
+
+      <div class="TextBoxDescription"><label id="Password" >Password: </label></div>
+      <input type="text" id="Password" name="Password"><br><br>
+
+      <input type="button" id="logInbutton" name="logInbutton" value="LogIn" onclick="LogInFuntion()"><br><br>
+
+      <div class="Hiperlink">
+        <a  href="https://htmlpreview.github.io/?https://github.com/BSMainardi/MovieWebsite/blob/main/signup.html">Reset My Password</a></div><br>
+
+      <div class="AdvicetosignIntext">
+      <p>Need a Account, SignUp using the link below:</p></div>
+
+      <div class="Hiperlink">
+      <a  href="https://htmlpreview.github.io/?https://github.com/BSMainardi/MovieWebsite/blob/main/signup.html">SignUp</a></div>
+    </form>
+  </body>
+</html>
