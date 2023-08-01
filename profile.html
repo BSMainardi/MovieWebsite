@@ -3,16 +3,107 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
-    <link rel="stylesheet" href="profile.css">
-    <script>
-    </script>
+    <link rel="stylesheet" href="css/profile.css">
   </head>
   <body>
     <article class="profile">
-      <section class="contain">
+      <h1 class="title"><a href="" target="_self"><span class="hidden">prev</span></a>profile</h1>
+
+      <section class="profile-container">
+        <div class="profile-img">
+          <div class="img-box">
+            <img src="img/no-img.png" alt="my image">
+          </div>
+          <button type="button" id="editBtn" class="edit-btn" title="edit profile" onclick="editCont();">
+            <span class="icon-pencil"><img src="img/pencil.svg" alt="edit"></span>
+          </button>
+          <div class="img-select">
+            <input type="file">
+          </div>
+        </div>
+
+        <div class="profile-cont">
+          <dl>
+            <dt>
+              <label>Name</label>
+            </dt>
+            <dd>
+              <input class="profile-inp" type="text" value="Tomwood" placeholder="Name" readonly onfocus="this.blur()">
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <label>Email</label>
+            </dt>
+            <dd>
+              <input class="profile-inp" type="text" value="Tomwood@gmail.com" placeholder="email@gmail.com" readonly onfocus="this.blur()">
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <label>Phone</label>
+            </dt>
+            <dd>
+              <input class="profile-inp" type="text" value="+1 (604) 899-4480" placeholder="1234567890" readonly onfocus="this.blur()">
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <label>Address</label>
+            </dt>
+            <dd>
+              <input class="profile-inp" type="text" value="889 W Pender St." placeholder="" readonly onfocus="this.blur()">
+              <input class="profile-inp" type="text" value="Suite 200 Vancouver" placeholder="" readonly onfocus="this.blur()">
+              <input class="profile-inp" type="text" value="BC V6C 3B2" placeholder="" readonly onfocus="this.blur()">
+            </dd>
+          </dl>
+        </div>
+
+        <div class="btn-wrap">
+          <button type="button" class="btn-cancel" onclick="editCancel()">Cancel</button>
+          <button type="button" class="btn-save" onclick="editSave()">Save</button>
+        </div>
       </section>
-      <section class="contain">
+
+      <section class="wish-container">
+        <div class="wish-list">
+
+        </div>
       </section>
     </article>
+
+    <script>
+      const editBtn = document.getElementById('editBtn')
+      const inps = document.querySelectorAll('.profile-inp')
+      const imgSel = document.querySelector('.img-select')
+
+      function editCont(){
+        editBtn.style.display = 'none'
+        imgSel.style.display = 'block'
+
+        for(let i = 0; i < inps.length; i++) {
+          inps[i].readOnly = false
+          inps[i].onfocus = ""
+        }
+      }
+
+      function exitEdit() {
+        editBtn.style.display = 'block'
+        imgSel.style.display = 'none'
+
+        for(let i in inps) {
+          inps[i].readOnly = true;
+          inps[i].onfocus = this.blur()
+        }
+      }
+
+      function editCancel(){
+        exitEdit()
+      }
+
+      function editSave(){
+        exitEdit()
+      }
+    </script>
   </body>
 </html>
