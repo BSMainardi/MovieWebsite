@@ -12,7 +12,7 @@
   </head>
   <body>
     <article class="profile">
-      <h1 class="title"><a href="" target="_self"><span class="hidden">prev</span></a>profile</h1>
+      <h1 class="title">profile</h1>
 
       <section class="profile-container">
         <div class="profile-img">
@@ -76,7 +76,7 @@
           <div class="swiper">
             <ul class="movieBox swiper-wrapper">
                 <li class="movieCard swiper-slide">
-                    <a href="">
+                    <a href="detail.html/detail_Falcon.html" target="_blank">
                         <img src="./img/Google/Falcon_Lake.png" alt="">
                         <div class="movieDes">
                             <p>Rates<span class="movieStar"></span></p>
@@ -113,8 +113,8 @@
         confirmBtn.style.display = 'block'
 
         for(let i = 0; i < inps.length; i++) {
-          inps[i].readOnly = false
           inps[i].onfocus = ''
+          inps[i].readOnly = false
         }
       }
 
@@ -124,13 +124,18 @@
         confirmBtn.style.display = 'none'
 
         for(let i in inps) {
-          inps[i].readOnly = true;
           inps[i].onfocus = this.blur()
+          inps[i].readOnly = true;
         }
       }
 
       function editCancel(){
         exitEdit()
+        addEventListener("reset", (event) => {
+          for(let i = 0; i < inps.length; i++) {
+            inps[i].reset()
+          }
+        });
       }
 
       function editSave(){
