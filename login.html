@@ -21,21 +21,21 @@
   </style>
   
   <script>
-    let UserName1;
-    let Password1;
+    let signupUsername;
+    let signupPassword;
     function LogInFuntion(){
-       UserName1 = "plk";
-       Password1 = "qwe";
-      var UserName = document.getElementById("username").value;
-      var Password = document.getElementById("password").value;
-      console.log(UserName)
-        if (UserName == UserName1){ 
+      //signupUsername = "plk";
+      //signupPassword = "qwe";
+      var loginUsername = document.getElementById("loginusername").value;
+      var loginPassword = document.getElementById("loginpassword").value;
+      console.log(loginUsername)
+        if (loginUsername == signupUsername){ 
 
-          if(Password != Password1){
+          if(loginPassword != signupPassword){
             document.write("Password doesn't match");
           }
 
-          if(Password == Password1){
+          if(loginPassword == signupPassword){
             window.location.href="https://htmlpreview.github.io/?https://github.com/BSMainardi/MovieWebsite/blob/main/index.html";
           }
         }
@@ -54,10 +54,10 @@
       </div>
 
       <div class="TextBoxDescription"><label id="UserName" >User Name or email: </label></div>
-      <input type="text" id="username" name="UserName"><br><br>
+      <input type="text" id="loginusername" name="UserName"><br><br>
 
       <div class="TextBoxDescription"><label id="Password" >Password: </label></div>
-      <input type="text" id="password" name="Password"><br><br>
+      <input type="text" id="loginpassword" name="Password"><br><br>
 
       <input type="button" id="logInbutton" name="logInbutton" value="LogIn" onclick="LogInFuntion()"><br><br>
 
