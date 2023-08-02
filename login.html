@@ -19,22 +19,24 @@
       text-align: center;
     }
   </style>
-  
+    
+
   <script>
     let signupUsername;
     let signupPassword;
+    var signedUp=false;
     function LogInFuntion(){
       //signupUsername = "plk";
       //signupPassword = "qwe";
       var loginUsername = document.getElementById("loginusername").value;
       var loginPassword = document.getElementById("loginpassword").value;
         if (loginUsername == signupUsername){ 
-
           if(loginPassword != signupPassword){
             document.write("Password doesn't match");
           }
 
           if(loginPassword == signupPassword){
+            signedUp = true;
             window.location.href="https://htmlpreview.github.io/?https://github.com/BSMainardi/MovieWebsite/blob/main/index.html";
           }
         }
