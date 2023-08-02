@@ -27,14 +27,11 @@ const swiper = new Swiper(".swiper", {
     spaceBetween: 48,
     autoHeight: true,
     speed: 350,
-    // allowSlideNext: false,
-    // allowSlidePrev: false,
-    // allowTouchMove: false,
     // navigation: {
     //     nextEl: '.swiper-button-next',
     //     prevEl: '.swiper-button-prev',
     // },
-    // loop: true,
+    loop: true,
     mousewheel: true,
     keyboard: true,
     autoplay: {
@@ -54,14 +51,9 @@ const swiper = new Swiper(".swiper", {
 function wishlist() {
     const movieBtn = document.querySelectorAll('.movieBtn');
 
-    // movieBtn.addEventListener('click', function(){
-    //     movieBtn[i].classList.toggle('is-active');
-    // });
-
     for (let i = 0; i < movieBtn.length; i++) {
-        // console.log(this.classList && this.classList.elements);
         movieBtn[i].addEventListener('click', function (e) {
-            this.classList.toggle('is-active');            
+            this.classList.toggle('is-active');
         })
     }
 }
