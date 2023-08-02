@@ -4,13 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+
+    <title>Sign Up</title>
+
+    <style>
+        
+        .h1 {
+          color: cadetblue;
+          font-size: 40px;
+          font-weight: bold;
+        }
+        .Hiperlink{
+          color:blue;
+          text-decoration: underline;
+        }
+        span{
+            color:black;
+        }
+        .TextBoxDescription{
+            color:black;
+        }
+        .body{
+          text-align: center;
+          width: 50%;
+          padding-top: 30px;
+          margin: auto;
+        }
+        .innerTxt{
+            text-align: right;
+            margin: 10px auto;
+            padding-right: 33%;
+        }
+        span{
+          font-weight: bold;
+        }
+        label{
+          font-weight: bold;
+        }
+    </style>
     <script>
+        var signupUsername= document.getElementById("signupUsername").value;
+        var signupPassword = document.getElementById("signupPassword").value;
 
         function myfunction() {
-            var password = document.getElementById("password").value;
-            var confirm= document.getElementById("confirm").value;
             var signupUsername= document.getElementById("signupUsername").value;
+            var signupPassword = document.getElementById("signupPassword").value;
+            var confirm= document.getElementById("confirm").value;
             var reg = new RegExp(/^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9!@#$%^&*]{8,15}$/);
             var error = document.getElementById("error");
             var error1= document.getElementById("error1");
@@ -18,10 +58,10 @@
             var condition1;
             var condition2;
             var condition3;
-          //  var valuestored = parseInt(password);
+          //  var valuestored = parseInt(signupPassword);
           //  console.log(valuestored);
-           // console.log(reg.test(password));
-            if((reg.test(password))==false){
+           // console.log(reg.test(signupPassword));
+            if((reg.test(signupPassword))==false){
                 error.textContent="Please make sure the password is 8-15 characters long, and include at least one uppercase, one lowercase letter, one number, and one special character.";
                 error.style.color="red";
                 condition1=false;
@@ -30,7 +70,7 @@
                 error.textContent="";
                 condition1=true;
             }
-            if (confirm != password) {
+            if (confirm != signupPassword) {
                 error1.textContent = "Please make sure the passwords match.";
                 error1.style.color = "red";
                 condition2=false;
@@ -50,6 +90,7 @@
             }
             if(condition1==true&&condition2==true&&condition3==true){
                 error.textContent="Thank you for signing up! ;)";
+                error.style.color="black";
                 setTimeout(function(){window.location.href = "./index.html";},time=3000);
                 
             }
@@ -60,29 +101,35 @@
 </head>
 
 <body>
-    <form id="form1">
-        <label>Sign Up</label>
-        <br>
-        <label>Email: </label>
-        <input type="text" id="signupUsername">
-        <br>
-        <span id="error2"></span>
-        <br>
-        <label>Password: </label>
-        <input type="text" id="password">
-        
-        <br>
-        <label>Confirm Password: </label>
-        <input type="text" id="confirm">
-        <br>
-        <span id="error1"></span>
-        <br>
-        
-        <span id="error"></span>
-        <br>
-        <input type="button" value="Submit" onclick="myfunction()">
+    <div class="body">
+        <form id="form1">
+            <label ><h1 class="h1">Sign Up</h1></label>
+            <br>
+            <div class="innerTxt">
+                <label class="TextBoxDescription">Email: </label>
+                <input type="text" id="signupUsername">
+                <br>
+                <span id="error2"></span>
+                <br>
+                <label class="TextBoxDescription">Password: </label>
+                <input type="text" id="signupPassword">
+                
+                <br>
+                <label class="TextBoxDescription">Confirm Password: </label>
+                <input type="text" id="confirm">
+                <br>
+                <span id="error1"></span>
+                <br>
+                
+                
+            </div>
+            <span id="error"></span>
+            <br>
+            <input type="button" value="Submit" onclick="myfunction()">
+            
 
-    </form>
+        </form>
+    </div>
 </body>
 
 </html>
