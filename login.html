@@ -38,9 +38,8 @@
       var loginPassword = document.getElementById("loginpassword").value;
         if (loginUsername ==signupUsername){ 
           if(loginPassword != signupPassword){
-            document.write("Password doesn't match");
+            alert("Password doesn't match");
           }
-
           if(loginPassword == signupPassword){
             window.location.href="./index.html";
             
@@ -50,11 +49,10 @@
             localStorage.setItem('LoggedUser', loginUsername);
             window.location.href = './index.html';
             //Save the values: signedUp and loginUsername to local storage to access then from the index page.
-            
           }
         }
         else{
-          document.write("Please verify user name"+"<br>");
+          alert("Please verify user name");
         }
     }
 
