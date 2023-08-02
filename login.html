@@ -24,10 +24,11 @@
     let UserName1;
     let Password1;
     function LogInFuntion(){
-       UserName1 = "plo";
+       UserName1 = "plk";
        Password1 = "qwe";
-      var UserName = (document.getElementById("UserName").value);
-      var Password = (document.getElementById("Password").value);
+      var UserName = document.getElementById("username").value;
+      var Password = document.getElementById("password").value;
+      console.log(UserName)
         if (UserName == UserName1){ 
 
           if(Password != Password1){
@@ -38,7 +39,7 @@
             window.location.href="https://htmlpreview.github.io/?https://github.com/BSMainardi/MovieWebsite/blob/main/index.html";
           }
         }
-        if (UserName != UserName1){
+        else{
           document.write("Please verify user name"+"<br>");
         }
     }
@@ -53,10 +54,10 @@
       </div>
 
       <div class="TextBoxDescription"><label id="UserName" >User Name or email: </label></div>
-      <input type="text" id="UserName" name="UserName"><br><br>
+      <input type="text" id="username" name="UserName"><br><br>
 
       <div class="TextBoxDescription"><label id="Password" >Password: </label></div>
-      <input type="text" id="Password" name="Password"><br><br>
+      <input type="text" id="password" name="Password"><br><br>
 
       <input type="button" id="logInbutton" name="logInbutton" value="LogIn" onclick="LogInFuntion()"><br><br>
 
