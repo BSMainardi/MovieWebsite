@@ -4,11 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
     <link rel="stylesheet" href="css/profile.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <!-- swiper -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.6/swiper-bundle.min.css"
-        integrity="sha512-iDPwu4/flStAQwiwb+w4cNFOxNkc61+a8/f0ut0sb8krDqKCLvuE8wj8MFUGlT71OBSDtpYwbU4BPg0f+qO9vg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
     <article class="profile">
@@ -106,15 +102,19 @@
       const inps = document.querySelectorAll('.profile-inp')
       const imgSel = document.querySelector('.img-select')
       const confirmBtn = document.getElementById('confirmBtn')
+      let inpArr = []
 
       function editCont(){
         editBtn.style.display = 'none'
         imgSel.style.display = 'block'
         confirmBtn.style.display = 'block'
+        
+        inpArr = []
 
         for(let i = 0; i < inps.length; i++) {
           inps[i].onfocus = ''
           inps[i].readOnly = false
+          inpArr.push(inps[i].value)
         }
       }
 
@@ -124,18 +124,16 @@
         confirmBtn.style.display = 'none'
 
         for(let i in inps) {
-          inps[i].onfocus = this.blur()
+          inps[i].onfocus = "this.blur()"
           inps[i].readOnly = true;
         }
       }
 
       function editCancel(){
         exitEdit()
-        addEventListener("reset", (event) => {
-          for(let i = 0; i < inps.length; i++) {
-            inps[i].reset()
-          }
-        });
+        for(let i = 0; i < inps.length; i++) {
+          inps[i].value = inpArr[i]
+        }
       }
 
       function editSave(){

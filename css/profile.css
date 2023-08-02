@@ -140,6 +140,7 @@ button {
 .profile-cont .profile-inp:read-only{
   padding-left: 0;
   border: 0;
+  outline: none;
 }
 .btn-wrap{
   display: none;
