@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .movieBtn {
+            margin-right: 8px;
+            padding: 8px;
+            background-color: #DCDBDB;
+            border-radius: 8px;
+        }
+
+        .movieBtn.is-active {
+            background-color: green;
+        }
+    </style>
+    <script>
+        function wishlist() {
+            const movieBtn = document.querySelectorAll('.movieBtn');
+
+            for (let i = 0; i < movieBtn.length; i++) {
+                // console.log(typeof(this.movieBtn));
+
+                console.log("length",movieBtn.length);
+                console.log("classlist",movieBtn[i].classList);
+
+                movieBtn[i].addEventListener('click', function () {
+                    console.log(this.classList.target);
+                })
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <button class="movieBtn" id="movieBtn" onclick="wishlist()">Wishlist</button>
+</body>
+
+</html>

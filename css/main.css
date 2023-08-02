@@ -97,6 +97,13 @@ li {
     }
 }
 
+.movieFlex {
+    /* for movieRate and movieBtn */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .movieStar {
     position: relative;
     margin-left: 8px;
@@ -132,6 +139,21 @@ li {
 
 .movieDes {
     padding: 8px;
+}
+
+.movieBtn {
+    margin-right: 8px;
+    padding: 8px;
+    background-color: #DCDBDB;
+    border-radius: 8px;
+}
+
+.movieBtn:hover {
+    opacity: .8;
+}
+
+.movieBtn.is-active {
+    background-color: green;
 }
 
 .movieSum {

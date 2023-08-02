@@ -1,28 +1,40 @@
 document.addEventListener('DOMContentLoaded', function () {
-
-    function matchHeight(elements) {
-        const target = Array.from(document.querySelectorAll(elements));
-        const heightList = [];
-        target.forEach(element => {
-            const height = element.clientHeight;
-            heightList.push(height);
-        });
-
-        const maxHeight = Math.max.apply(null, heightList);
-        target.forEach(element => {
-            element.style.height = maxHeight + 'px';
-        });
-    }
-
+    // recalling the matchHeight function
     matchHeight('.movieCard');
+
+    // recalling the wishlist
+    // wishlist();
+
+    const movieBtn = document.querySelectorAll('movieBtn');
+
+    movieBtn.addEventListener('movieBtn', function(){
+        console.log(movieBtn);
+    });
 })
+
+
+// adjusting the height of mocieCard
+function matchHeight(elements) {
+    const target = Array.from(document.querySelectorAll(elements));
+    const heightList = [];
+    target.forEach(element => {
+        const height = element.clientHeight;
+        heightList.push(height);
+    });
+
+    const maxHeight = Math.max.apply(null, heightList);
+    target.forEach(element => {
+        element.style.height = maxHeight + 'px';
+    });
+}
 
 // swiper
 const swiper = new Swiper(".swiper", {
     slidesPerView: 4,
     slidesPerGroup: 1,
+    spaceBetween: 48,
     autoHeight: true,
-    speed: 600,
+    speed: 350,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -30,8 +42,10 @@ const swiper = new Swiper(".swiper", {
     loop: true,
     mousewheel: true,
     keyboard: true,
-    autoplay: true,
-    spaceBetween: 48,
+    autoplay: {
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+    },
     breakpoints: {
         480: {
             // slidesPerView: ,
@@ -41,5 +55,20 @@ const swiper = new Swiper(".swiper", {
         }
     }
 });
+
+// function wishlist() {
+//     const movieBtn = document.querySelectorAll('.movieBtn');
+
+//     // movieBtn.addEventListener('click', function(){
+//     //     movieBtn[i].classList.toggle('is-active');
+//     // });
+
+//     for (let i = 0; i < movieBtn.length; i++) {
+//         // console.log(this.classList && this.classList.elements);
+//         movieBtn[i].addEventListener('click', function (e) {
+//             console.log(e.target);
+//         })
+//     }
+// }
 
 
