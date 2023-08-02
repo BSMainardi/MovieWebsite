@@ -69,16 +69,19 @@ input[type="submit"] {
 .under {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 500px;
   margin-top: 40px;
   background-color: #eeeeee;
   padding: 60px 25px;
 }
+.review {
+  flex-basis: 50%;
+}
 .review textarea {
   resize: none;
-  width: 100%;
+  width: 90%;
   height: 170px;
   padding: 10px;
 }
