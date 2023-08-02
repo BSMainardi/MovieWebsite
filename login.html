@@ -25,19 +25,22 @@
     let signupUsername;
     let signupPassword;
     var signedUp=false;
+  
     function LogInFuntion(){
       //signupUsername = "plk";
       //signupPassword = "qwe";
+      signupUsername = localStorage.UserName;
+      signupPassword = localStorage.PassWord;
       var loginUsername = document.getElementById("loginusername").value;
       var loginPassword = document.getElementById("loginpassword").value;
-        if (loginUsername == signupUsername){ 
+        if (loginUsername ==signupUsername){ 
           if(loginPassword != signupPassword){
             document.write("Password doesn't match");
           }
 
           if(loginPassword == signupPassword){
             signedUp = true;
-            window.location.href="https://htmlpreview.github.io/?https://github.com/BSMainardi/MovieWebsite/blob/main/index.html";
+            window.location.href="./index.html";
           }
         }
         else{
@@ -50,7 +53,7 @@
 </head>
 
   <body class="body">
-    <form>
+    <form action="./index.html" method="get">
       <h1 class="h1">LOGIN </style></h1><br>
       </div>
 
