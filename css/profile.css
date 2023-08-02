@@ -51,6 +51,7 @@ button {
 .profile-img .img-box img{
   position: absolute;
   width: 120%;
+  max-width: 120%;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -74,7 +75,40 @@ button {
   height: 60%;
 }
 .profile-img .img-select{
+  position: absolute;
   display: none;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.img-select .img-sel-btn{
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(221,221,221,.5);
+  cursor: pointer;
+}
+.img-select .img-sel-btn::after{
+  position: absolute;
+  display: block;
+  content:'';
+  width: 1px;
+  height: 30px;
+  top: 10px;
+  left: 50%;
+  background-color: #222;
+}
+.img-select .img-sel-btn::before{
+  position: absolute;
+  display: block;
+  content:'';
+  width: 30px;
+  height: 1px;
+  top: 50%;
+  left: 10px;
+  background-color: #222;
 }
 .profile-cont{
   flex-grow: 1;
@@ -89,12 +123,14 @@ button {
   color: #888;
 }
 .profile-cont dd{
-  margin-top: 5px;
+  display: flex;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 .profile-cont .profile-inp{
-  display: inline-block;
-  padding: 10px 10px;
+  flex: 1;
+  position: relative;
+  padding: 5px 10px;
   box-sizing: border-box;
   border-top: 0;
   border-left: 0;
@@ -106,6 +142,7 @@ button {
   border: 0;
 }
 .btn-wrap{
+  display: none;
   flex-shrink: 0;
   width: 100%;
   margin-top: 20px;
@@ -136,6 +173,10 @@ button {
   background-color: #101010;
 }
 
+.wish-container{
+  padding: 30px 0 150px;
+}
+
 @media screen and (max-width: 800px) {
   .title {
     text-align: center;
@@ -149,5 +190,8 @@ button {
   .profile-cont{
     margin-top: 40px;
     margin-left: 0;
+  }
+  .profile-cont dd{
+    flex-direction: column;
   }
 }
