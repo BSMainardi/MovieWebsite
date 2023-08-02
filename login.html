@@ -10,8 +10,10 @@
       text-decoration: underline;
     }
     .AdvicetosignIntext{
+      color:black;
     }
     .TextBoxDescription{
+      color:black;
     }
     .body{
       text-align: center;
@@ -22,20 +24,22 @@
     let UserName1;
     let Password1;
     function LogInFuntion(){
-       UserName1 = "poc";
+       UserName1 = "plo";
        Password1 = "qwe";
       var UserName = (document.getElementById("UserName").value);
       var Password = (document.getElementById("Password").value);
-        if (UserName==UserName1){ 
-          if(Password==Password1){ 
+        if (UserName == UserName1){ 
+
+          if(Password != Password1){
+            document.write("Password doesn't match");
+          }
+
+          if(Password == Password1){
             window.location.href="https://htmlpreview.github.io/?https://github.com/BSMainardi/MovieWebsite/blob/main/index.html";
           }
         }
-        if(Password!=Password1){
-            document.write("Password doesn't match")
-          }
-        else{
-          document.write("Please verify user name");
+        if (UserName != UserName1){
+          document.write("Please verify user name"+"<br>");
         }
     }
 
