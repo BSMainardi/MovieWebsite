@@ -1,5 +1,6 @@
 a{
   text-decoration: none;
+  color: inherit;
 }
 .wrapper{
   margin: 0 auto;
@@ -7,21 +8,24 @@ a{
 padding: 40px;
 }
 .container{
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
-text-align: center;
+  height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
 }
 .movie{
-  width: 32%;
-  height: 300px;
-  background-color: aquamarine;
+  height: 500px;
 }
-.director{
-  width: 32%;
+.movieImg{
+  height: 500px;
+}
+
+.directotText{font-size: 24px;
+
+font-weight: bold;  
 }
 .rate{
-  width: 32%;
+  width: 24%;
 }
 .rate-form {
   display: flex;
@@ -60,4 +64,30 @@ input[type=submit]{
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
+}
+.under{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  margin-top: 40px;
+}
+.review {
+  width: 50%;
+}
+.review textarea {
+  resize: none;
+  width: 90%;
+  height: 170px;
+  padding: 10px;
+}
+.preview{
+  width: 50%;
+  flex-basis: 50%;
+}
+.previewText{
+  font-size: 24px;
+  flex-basis: 50%;
+  font-weight: bold;
 }
