@@ -10,10 +10,8 @@
       text-decoration: underline;
     }
     .AdvicetosignIntext{
-
     }
     .TextBoxDescription{
-
     }
     .body{
       text-align: center;
@@ -21,17 +19,21 @@
   </style>
   
   <script>
+    let UserName1;
+    let Password1;
     function LogInFuntion(){
+       UserName1 = "poc";
+       Password1 = "qwe";
       var UserName = (document.getElementById("UserName").value);
       var Password = (document.getElementById("Password").value);
         if (UserName==UserName1){ 
           if(Password==Password1){ 
             window.location.href="https://htmlpreview.github.io/?https://github.com/BSMainardi/MovieWebsite/blob/main/index.html";
           }
-          else{
+        }
+        if(Password!=Password1){
             document.write("Password doesn't match")
           }
-        }
         else{
           document.write("Please verify user name");
         }
