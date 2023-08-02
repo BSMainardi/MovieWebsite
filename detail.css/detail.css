@@ -1,30 +1,31 @@
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
-.wrapper{
+.wrapper {
   margin: 0 auto;
   max-width: 1170px;
-padding: 40px;
+  padding: 40px;
 }
-.container{
+.container {
   height: 500px;
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 50px;
 }
-.movie{
+.movie {
   height: 500px;
 }
-.movieImg{
+.movieImg {
   height: 500px;
 }
 
-.directotText{font-size: 24px;
+.directotText {
+  font-size: 24px;
 
-font-weight: bold;  
+  font-weight: bold;
 }
-.rate{
+.rate {
   width: 24%;
 }
 .rate-form {
@@ -33,7 +34,7 @@ font-weight: bold;
   justify-content: flex-end;
   text-align: center;
 }
-.rate-form input[type=radio] {
+.rate-form input[type="radio"] {
   display: none;
 }
 .rate-form label {
@@ -49,13 +50,13 @@ font-weight: bold;
 .rate-form label:hover ~ label {
   color: #ffcc00;
 }
-.rate-form input[type=radio]:checked ~ label {
+.rate-form input[type="radio"]:checked ~ label {
   color: #ffcc00;
 }
-.reviewTitle{
+.reviewTitle {
   font-size: 24px;
 }
-input[type=submit]{
+input[type="submit"] {
   background-color: #2d6fd2;
   border: none;
   border-radius: 8px;
@@ -65,13 +66,15 @@ input[type=submit]{
   margin: 4px 2px;
   cursor: pointer;
 }
-.under{
+.under {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   height: 500px;
   margin-top: 40px;
+  background-color: #eeeeee;
+  padding: 0 25px;
 }
 .review {
   width: 50%;
@@ -82,11 +85,11 @@ input[type=submit]{
   height: 170px;
   padding: 10px;
 }
-.preview{
+.preview {
   width: 50%;
   flex-basis: 50%;
 }
-.previewText{
+.previewText {
   font-size: 24px;
   flex-basis: 50%;
   font-weight: bold;
