@@ -80,7 +80,7 @@ li {
 
 .movieBox {
     margin-top: 16px;
-    padding-bottom: 8px;
+    padding: 8px;
 }
 
 .movieCard {
@@ -150,6 +150,7 @@ li {
 
 .movieBtn:hover {
     opacity: .8;
+    cursor: pointer;
 }
 
 .movieBtn.is-active {

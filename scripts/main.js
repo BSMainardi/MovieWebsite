@@ -2,16 +2,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // recalling the matchHeight function
     matchHeight('.movieCard');
 
-    // recalling the wishlist
-    // wishlist();
-
-    const movieBtn = document.querySelectorAll('movieBtn');
-
-    movieBtn.addEventListener('movieBtn', function(){
-        console.log(movieBtn);
-    });
+    wishlist();
 })
-
 
 // adjusting the height of mocieCard
 function matchHeight(elements) {
@@ -35,11 +27,14 @@ const swiper = new Swiper(".swiper", {
     spaceBetween: 48,
     autoHeight: true,
     speed: 350,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    loop: true,
+    // allowSlideNext: false,
+    // allowSlidePrev: false,
+    // allowTouchMove: false,
+    // navigation: {
+    //     nextEl: '.swiper-button-next',
+    //     prevEl: '.swiper-button-prev',
+    // },
+    // loop: true,
     mousewheel: true,
     keyboard: true,
     autoplay: {
@@ -56,19 +51,19 @@ const swiper = new Swiper(".swiper", {
     }
 });
 
-// function wishlist() {
-//     const movieBtn = document.querySelectorAll('.movieBtn');
+function wishlist() {
+    const movieBtn = document.querySelectorAll('.movieBtn');
 
-//     // movieBtn.addEventListener('click', function(){
-//     //     movieBtn[i].classList.toggle('is-active');
-//     // });
+    // movieBtn.addEventListener('click', function(){
+    //     movieBtn[i].classList.toggle('is-active');
+    // });
 
-//     for (let i = 0; i < movieBtn.length; i++) {
-//         // console.log(this.classList && this.classList.elements);
-//         movieBtn[i].addEventListener('click', function (e) {
-//             console.log(e.target);
-//         })
-//     }
-// }
+    for (let i = 0; i < movieBtn.length; i++) {
+        // console.log(this.classList && this.classList.elements);
+        movieBtn[i].addEventListener('click', function (e) {
+            this.classList.toggle('is-active');            
+        })
+    }
+}
 
 
