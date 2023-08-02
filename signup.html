@@ -39,12 +39,6 @@
             margin: 10px auto;
             padding-right: 30%;
         }
-        span{
-          font-weight: bold;
-        }
-        label{
-          font-weight: bold;
-        }
     </style>
     <script>
         var signupUsername= document.getElementById("signupUsername").value;
@@ -61,9 +55,6 @@
             var condition1;
             var condition2;
             var condition3;
-          //  var valuestored = parseInt(signupPassword);
-          //  console.log(valuestored);
-           // console.log(reg.test(signupPassword));
             if((reg.test(signupPassword))==false){
                 error.textContent="Please make sure the password is 8-15 characters long, and include at least one uppercase, one lowercase letter, one number, and one special character.";
                 error.style.color="red";
