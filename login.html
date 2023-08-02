@@ -20,7 +20,6 @@
     }
   </style>
     
-
   <script>
     let signupUsername;
     let signupPassword;
@@ -29,8 +28,12 @@
     function LogInFuntion(){
       //signupUsername = "plk";
       //signupPassword = "qwe";
-      signupUsername = localStorage.UserName;
-      signupPassword = localStorage.PassWord;
+      //#Un commment in case you want to test with an especific user and password.
+
+      signupUsername = localStorage.UserName; 
+      signupPassword = localStorage.PassWord; 
+      //Pull the values: signupUsername and signupPassword from local estorage.
+
       var loginUsername = document.getElementById("loginusername").value;
       var loginPassword = document.getElementById("loginpassword").value;
         if (loginUsername ==signupUsername){ 
@@ -39,8 +42,15 @@
           }
 
           if(loginPassword == signupPassword){
-            signedUp = true;
             window.location.href="./index.html";
+            
+            signedUp = true;
+            localStorage.setItem('Logged', signedUp);
+            window.location.href = './index.html';
+            localStorage.setItem('LoggedUser', loginUsername);
+            window.location.href = './index.html';
+            //Save the values: signedUp and loginUsername to local storage to access then from the index page.
+            
           }
         }
         else{
