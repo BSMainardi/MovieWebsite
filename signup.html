@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./reset.css">
+    <!--<link rel="stylesheet" href="./reset.css">-->
 
     <title>Sign Up</title>
 
@@ -39,10 +39,9 @@
             margin: 10px auto;
             padding-right: 30%;
         }
+
     </style>
     <script>
-        var signupUsername= document.getElementById("signupUsername").value;
-        var signupPassword = document.getElementById("signupPassword").value;
 
         function myfunction() {
             var signupUsername= document.getElementById("signupUsername").value;
@@ -55,6 +54,18 @@
             var condition1;
             var condition2;
             var condition3;
+            
+            var valueusername = document.getElementById('signupUsername').value;
+            // Store the value in localStorage
+            localStorage.setItem('UserName', valueusername);
+            //console.log(localStorage);   
+            // Redirect to the second page
+            window.location.href = './login.html';
+
+            var valuepassword = document.getElementById('signupPassword').value;
+            localStorage.setItem('PassWord', valuepassword);
+            window.location.href = './login.html';
+
             if((reg.test(signupPassword))==false){
                 error.textContent="Please make sure the password is 8-15 characters long, and include at least one uppercase, one lowercase letter, one number, and one special character.";
                 error.style.color="red";
@@ -85,7 +96,7 @@
             if(condition1==true&&condition2==true&&condition3==true){
                 error.textContent="Thank you for signing up! ;)";
                 error.style.color="black";
-                setTimeout(function(){window.location.href = "./index.html";},time=3000);
+                setTimeout(function(){window.location.href = "./login.html";},time=3000);
                 
             }
             
