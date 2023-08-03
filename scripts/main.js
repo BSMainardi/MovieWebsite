@@ -20,6 +20,9 @@ function matchHeight(elements) {
     });
 }
 
+let slides = document.querySelectorAll('.swiper-slide')
+let loopControl = slides.length < 4 ? false : true
+
 // swiper
 const swiper = new Swiper(".swiper", {
     slidesPerView: 4,
@@ -31,7 +34,7 @@ const swiper = new Swiper(".swiper", {
     //     nextEl: '.swiper-button-next',
     //     prevEl: '.swiper-button-prev',
     // },
-    loop: true,
+    loop: loopControl,
     mousewheel: true,
     keyboard: true,
     autoplay: {
