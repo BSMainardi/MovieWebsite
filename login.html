@@ -41,13 +41,13 @@
             alert("Password doesn't match");
           }
           if(loginPassword == signupPassword){
-            window.location.href="./index.html";
+            window.location.href="./index_login.html";
             
             signedUp = true;
             localStorage.setItem('Logged', signedUp);
-            window.location.href = './index.html';
+            window.location.href = './index_login.html';
             localStorage.setItem('LoggedUser', loginUsername);
-            window.location.href = './index.html';
+            window.location.href = './index_login.html';
             //Save the values: signedUp and loginUsername to local storage to access then from the index page.
           }
         }
@@ -61,7 +61,7 @@
 </head>
 
   <body class="body">
-    <form action="./index.html" method="get">
+    <form action="./index_login.html" method="get">
       <h1 class="h1">LOGIN </style></h1><br>
       </div>
 
